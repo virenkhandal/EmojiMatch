@@ -1,0 +1,1 @@
+#select 5 main emojis: smiling, laughing, sad, angry, confused
