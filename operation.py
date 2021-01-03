@@ -12,6 +12,7 @@ y = message.sentiment.subjectivity
 
 
 all_points = []
+emojilist = ['happy', 'laugh', 'sad', 'angry']
 for emoji in emojis:
     for i in emoji:
         sentiment = TextBlob(i).sentiment
