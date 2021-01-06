@@ -40,10 +40,10 @@ X = np.array(xy_list)
 kmeans = KMeans(n_clusters=4, random_state=0).fit(X)
 
 data = np.array([[x, y]])
-cry = [[TextBlob("cry").sentiment.polarity, TextBlob("cry").sentiment.subjectivity]]
 happy = [[TextBlob("happy").sentiment.polarity, TextBlob("happy").sentiment.subjectivity]]
-laugh = [[TextBlob("laugh").sentiment.polarity, TextBlob("laugh").sentiment.subjectivity]]
-angry = [[TextBlob("angry").sentiment.polarity, TextBlob("angry").sentiment.subjectivity]]
+laugh = [[TextBlob("smile").sentiment.polarity, TextBlob("laugh").sentiment.subjectivity]]
+cry = [[TextBlob("cry").sentiment.polarity, TextBlob("cry").sentiment.subjectivity]]
+angry = [[TextBlob("mad").sentiment.polarity, TextBlob("mad").sentiment.subjectivity]]
 # plt.scatter(X[:, 0], X[:, 1])
 
 print("happy: ", kmeans.predict(happy))
