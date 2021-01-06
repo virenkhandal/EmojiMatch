@@ -4,6 +4,9 @@
 #sad: U+1F62D, sad, sorrow, depressed, cry
 #angry: U+1F620, angry, mad, rage
 
+dict = {"smile": '\U0001f604', "laugh":'\U0001f602', "sad":'\U0001f62d', "angry":'\U0001f620'}
+
+
 smile = ["smile", "happy", "joy"]
 laugh = ["laugh", "happy", "joke"]
 sad = ["sad", "sorrow", "cry"]
