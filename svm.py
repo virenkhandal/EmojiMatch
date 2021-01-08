@@ -11,9 +11,10 @@ X = []
 y = []
 counter = 0
 for key in emojidict:
+    print(key, ": ", counter)
     for i in emojidict.get(key):
         m = TextBlob(i)
-        curr = [m.sentiment.polarity, m.sentiment.subjectivity]
+        curr = [m.sentiment.polarity]
         X.append(curr)
         y.append(counter)
     counter = counter + 1
@@ -21,5 +22,5 @@ for key in emojidict:
 clf = svm.SVC()
 clf.fit(X, y)
 
-message = [TextBlob(text).sentiment.polarity, TextBlob(text).sentiment.subjectivity]
+message = [TextBlob(text).sentiment.polarity]
 print(clf.predict([message]))
