@@ -6,6 +6,7 @@
 
 dict = {"smile": '\U0001f604', "laugh":'\U0001f602', "sad":'\U0001f62d', "angry":'\U0001f620'}
 
+emojidict = dict.fromkeys(["smile", "laugh", "sad", "angry"])
 
 smile = ["smile", "happy", "joy"]
 laugh = ["laugh", "happy", "joke"]
@@ -17,9 +18,15 @@ emojis = [smile, laugh, sad, angry]
 from PyDictionary import PyDictionary
 dictionary=PyDictionary()
 
-for emoji in emojis:
-    for i in range(3):
-        #print(emoji[i])
-        emoji.extend(dictionary.synonym(emoji[i]))
+emojidict["smile"] = dictionary.synonym("smile")
+emojidict["laugh"] = dictionary.synonym("laugh")
+emojidict["sad"] = dictionary.synonym("sad")
+emojidict["angry"] = dictionary.synonym("angry")
+
+
+# for emoji in emojis:
+#     for i in range(3):
+#         #print(emoji[i])
+#         emoji.extend(dictionary.synonym(emoji[i]))
 
  
