@@ -19,3 +19,4 @@ for key in emojidict:
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X, Y)
 tree.plot_tree(clf) 
+#add data to predict
