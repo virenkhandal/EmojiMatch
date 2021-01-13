@@ -40,6 +40,11 @@ X = np.array(xy_list)
 kmeans = KMeans(n_clusters=4, random_state=0).fit(X)
 
 data = np.array([[x, y]])
+iterdict = emojidict
+
+for key in emojidict:
+    iterdict[key] = [[TextBlob(str(key)).sentiment.polarity, TextBlob(str(key)).sentiment.subjectivity]]
+
 happy = [[TextBlob("happy").sentiment.polarity, TextBlob("happy").sentiment.subjectivity]]
 laugh = [[TextBlob("smile").sentiment.polarity, TextBlob("laugh").sentiment.subjectivity]]
 cry = [[TextBlob("cry").sentiment.polarity, TextBlob("cry").sentiment.subjectivity]]
