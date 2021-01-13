@@ -4,7 +4,7 @@
 #sad: U+1F62D, sad, sorrow, depressed, cry
 #angry: U+1F620, angry, mad, rage
 
-dict = {"smile": '\U0001f604', "laugh":'\U0001f602', "sad":'\U0001f62d', "angry":'\U0001f620'}
+dict = {"happy": '\U0001f604', "laugh":'\U0001f602', "cry":'\U0001f62d', "angry":'\U0001f620'}
 
 emojidict = dict.fromkeys(["smile", "laugh", "sad", "angry"])
 

@@ -52,11 +52,10 @@ print("cry: ", kmeans.predict(cry))
 print("angry: ", kmeans.predict(angry))
 print("your message: ", kmeans.predict(data))
 
-if kmeans.predict(data) == kmeans.predict(happy):
-    print(text, dict.get("smile"))
-elif kmeans.predict(data) == kmeans.predict(laugh):
-    print(text, dict.get("laugh"))
-elif kmeans.predict(data) == kmeans.predict(cry):
-    print(text, dict.get("sad"))
-elif kmeans.predict(data) == kmeans.predict(angry):
-    print(text, dict.get("angry"))
+iterdict = {"happy": happy, "laugh": laugh, "cry": cry, "angry": angry}
+
+list = [happy, laugh, cry, angry]
+
+for i in iterdict:
+    if kmeans.predict(data) == kmeans.predict(iterdict.get(i)):
+        print(text, dict.get(i))
